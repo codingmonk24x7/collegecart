@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojects/register.dart';
 
 class Mylogin extends StatefulWidget {
   @override
@@ -34,6 +35,16 @@ class _MyloginState extends State<Mylogin> {
                     left: 35.0),
                 child: Column(
                   children: [
+                    Text(
+                      'CollegeCart',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'OoohBaby',
+                          fontSize: 40.0),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
                     TextField(
                       decoration: InputDecoration(
                         fillColor: Colors.grey.shade400,
@@ -78,7 +89,12 @@ class _MyloginState extends State<Mylogin> {
                         minimumSize: Size(180.0, 20.0),
                         backgroundColor: Colors.blue,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => register()));
+                      },
                       child: Text(
                         'Register',
                         style: TextStyle(color: Colors.white, fontSize: 25.0),
