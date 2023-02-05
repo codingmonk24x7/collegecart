@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterprojects/register.dart';
+import 'package:flutterprojects/sidemenu.dart';
 
 class Mylogin extends StatefulWidget {
   @override
@@ -75,7 +76,10 @@ class _MyloginState extends State<Mylogin> {
                         minimumSize: Size(180.0, 20.0),
                         backgroundColor: Colors.blue,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => NavBar()));
+                      },
                       child: Text(
                         'Login',
                         style: TextStyle(color: Colors.white, fontSize: 25.0),

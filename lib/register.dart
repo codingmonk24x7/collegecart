@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojects/sidemenu.dart';
 
 class register extends StatefulWidget {
   const register({Key? key}) : super(key: key);
@@ -88,7 +89,10 @@ class _registerState extends State<register> {
                         minimumSize: Size(180.0, 20.0),
                         backgroundColor: Colors.blue,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => NavBar()));
+                      },
                       child: Text(
                         'Register',
                         style: TextStyle(color: Colors.white, fontSize: 25.0),
